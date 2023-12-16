@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="flex md:flex-row flex-col-reverse  items-center justify-center gap-10 px-3 bg-[#F8F1D340] pb-24 md:mb-40 mb-24 mt-5">
       <div>
         <div>
-          <img src={circleTop} alt="" />
+          <img className="mb-5" src={circleTop} alt="" />
         </div>
         <p className="font-semibold text-[20px] mb-3 banner-top-title">Discover the beauty of the tropics</p>
         <h1 className="lg:text-7xl md:text-5xl text-3xl banner-title md:space-y-3 md:mb-12 mb-5">
