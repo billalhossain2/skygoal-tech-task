@@ -1,9 +1,14 @@
+import Hamburger from 'hamburger-react'
+import { useState } from 'react';
+
 const navLinks = ['Home', 'About', 'Schedules', 'Membership', 'Pricing'];
 
 const Navbar = () => {
+  const [isOpen, setOpen] = useState(false)
   return (
-    <nav className="flex md:flex-row md:pr-3 flex-col justify-end items-center mt-10">
-       <ul className="flex md:flex-row flex-col md:gap-10 gap-5 xl:mr-[363px] md:mr-14 font-medium">
+    <nav>
+       <div className="md:flex md:pr-3 justify-end items-center mt-10 hidden">
+       <ul className="flex gap-10 xl:mr-[363px] md:mr-14 font-medium">
           {
             navLinks.map((navLink, key) => (
             <li key={key}>
@@ -13,10 +18,33 @@ const Navbar = () => {
           }
        </ul>
 
-       <div className="flex md:flex-row flex-col md:items-center md:gap-10 gap-5 md:mt-0 mt-5">
+       <div className="flex items-center gap-10">
          <a href="#" className="text-[#7D7D7D] font-medium">Offers</a>
          <button className="bg-[#F27A44] md:py-4 py-2 md:px-8 px-5 rounded-full text-white">Courses</button>
        </div>
+       </div>
+
+       {/* Mobile Menu  */}
+      <div className="mt-2 md:hidden">
+      <div className='flex justify-end'><Hamburger toggled={isOpen} toggle={setOpen} /></div>
+      <div className={`relative duration-300 ${isOpen ? 'left-0' : 'left-[-200px]'}`}>
+       <ul className="space-y-5">
+          {
+            navLinks.map((navLink, key) => (
+            <li key={key}>
+              <a href="#">{navLink}</a>
+            </li>
+            ))
+          }
+       </ul>
+
+       <div className="space-y-5 mt-5">
+         <a href="#" className="text-[#7D7D7D] font-medium">Offers</a>
+         <br />
+         <button className="bg-[#F27A44] py-2  px-4 rounded-full text-white">Courses</button>
+       </div>
+       </div>
+      </div>
     </nav>
   )
 }
