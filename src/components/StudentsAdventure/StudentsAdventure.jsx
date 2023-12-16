@@ -24,7 +24,7 @@ const students = [
 
 const StudentsAdventure = () => {
   return (
-    <div className="flex md:flex-row flex-col-reverse justify-center lg:gap-28 md:gap-14 mb-20">
+    <div className="flex md:flex-row flex-col-reverse md:items-start items-center justify-center lg:gap-28 md:gap-14 mb-20 px-3">
        <div className="md:mt-0 mt-20">
           {
             students.map((student, key) =>(<StucentCard key={key} student={student}></StucentCard>))

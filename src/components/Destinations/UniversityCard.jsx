@@ -10,7 +10,7 @@ const UniversityCard = ({university}) => {
         <h3 className='md:text-[20px] text-[17px] font-extrabold md:p-5 p-2'>{name}</h3>
         <div className='flex justify-between items-center md:p-5 p-2'>
         <p className='font-medium text-[13px]'>{location}</p>
-        <p className='bg-gray-200 w-10 h-10 text-center font-bold rounded-full pt-1'>...</p>
+        <button className='bg-gray-200 w-10 h-10 font-bold rounded-full text-2xl flex flex-col items-center'>...</button>
         </div>
     </div>
   )

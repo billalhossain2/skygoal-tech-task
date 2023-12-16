@@ -37,15 +37,15 @@ const universities = [
 
 const Destinations = () => {
   return (
-    <div className="mb-20">
-      <h3 className="font-medium text-[40px] mb-[60px]">Our Destinations</h3>
+    <div className="mb-32">
+      <h3 className="font-medium md:text-[40px] text-[30px] md:mb-[60px] mb-8">Our Destinations</h3>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
         {universities.map((university, key) => (
           <UniversityCard key={key} university={university}></UniversityCard>
         ))}
       </div>
       {/* Arrow Sign  */}
-      <div className="flex justify-center mt-16">
+      <div className="flex justify-center md:mt-16 mt-3">
       <div className="flex items-center gap-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"

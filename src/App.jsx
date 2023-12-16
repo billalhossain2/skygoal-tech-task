@@ -1,8 +1,12 @@
 import './App.css'
 import Banner from './components/Banner/Banner'
+import BookNowForm from './components/BookNowForm/BookNowForm'
 import Destinations from './components/Destinations/Destinations'
+import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import StudentsAdventure from './components/StudentsAdventure/StudentsAdventure'
+import StudentsDiscount from './components/StudentsDiscount/StudentsDiscount'
+import Testimonials from './components/Testimonials/Testimonials'
 
 function App() {
 
@@ -12,6 +16,10 @@ function App() {
       <Banner></Banner>
       <StudentsAdventure></StudentsAdventure>
       <Destinations></Destinations>
+      <StudentsDiscount></StudentsDiscount>
+      <BookNowForm></BookNowForm>
+      <Testimonials></Testimonials>
+      <Footer></Footer>
      </div>
   )
 }

@@ -6,7 +6,7 @@ const navLinks = ['Home', 'About', 'Schedules', 'Membership', 'Pricing'];
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
   return (
-    <nav className='md:mb-10'>
+    <nav>
        <div className="md:flex md:pr-3 justify-end items-center mt-10 hidden">
        <ul className="flex gap-10 xl:mr-[363px] md:mr-14 font-medium">
           {
