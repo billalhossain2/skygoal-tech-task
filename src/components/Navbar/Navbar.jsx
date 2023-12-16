@@ -6,7 +6,7 @@ const navLinks = ['Home', 'About', 'Schedules', 'Membership', 'Pricing'];
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
   return (
-    <nav>
+    <nav className='md:mb-10'>
        <div className="md:flex md:pr-3 justify-end items-center mt-10 hidden">
        <ul className="flex gap-10 xl:mr-[363px] md:mr-14 font-medium">
           {
@@ -27,7 +27,7 @@ const Navbar = () => {
        {/* Mobile Menu  */}
       <div className="mt-2 md:hidden">
       <div className='flex justify-end'><Hamburger toggled={isOpen} toggle={setOpen} /></div>
-      <div className={`relative duration-300 ${isOpen ? 'left-0' : 'left-[-200px]'}`}>
+      <div className={`absolute bg-white py-5 px-4 w-full duration-300 ${isOpen ? 'left-0' : 'left-[-1200px]'}`}>
        <ul className="space-y-5">
           {
             navLinks.map((navLink, key) => (

@@ -13,6 +13,10 @@
 } */
 
 
-nav {
+nav, .banner-top-title, .banner-bottom-text{
   font-family: "Inter", sans-serif;
+}
+
+.banner-title{
+  font-family: "Poppins", sans-serif;
 }
